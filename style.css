@@ -1,0 +1,71 @@
+.background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(
+    186.74deg,
+    rgba(79, 195, 247, 0.82) 8.45%,
+    rgba(79, 195, 247, 0.55) 91.96%
+  );
+}
+
+.content-container {
+  width: calc(100vw - 156px);
+  height: calc(100vh - 80px);
+  margin: 40px 78px 40px 78px;
+  background: white;
+  background: linear-gradient(238.78deg, #fcfeff 0.95%, #ffffff 100%);
+  box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.5), 0px 30px 30px rgba(0, 0, 0, 0.08);
+  padding-top: 1px;
+}
+
+.content-container nav {
+  margin: 18px 50px;
+  border-bottom: 5px solid #f4511e;
+}
+
+.text-container {
+  max-width: 600px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.combine-svg-image {
+  width: 100%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+div.fileinputs {
+	position: relative;
+}
+
+div.fakefile {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+}
+
+input.file {
+	position: relative;
+	text-align: right;
+	-moz-opacity:0 ;
+	filter:alpha(opacity: 0);
+	opacity: 0;
+	z-index: 2;
+}
