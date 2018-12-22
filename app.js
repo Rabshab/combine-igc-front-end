@@ -22,11 +22,20 @@ const postFiles = (contents, length) => {
   if (result.length === length) {
     return fetch("http://localhost:3000/combine", {
       method: "POST",
-      mode: "no-cors",
       headers: {
         "Content-Type": "application/json; charset=utf-8"
       },
       body: JSON.stringify(result)
-    }).then(res => res.json());
+    }).then(res => {
+      res.blob().then(blob => {
+        var link = document.createElement("a");
+        link.href = window.URL.createObjectURL(blob);
+        link.download = "combined.igc";
+
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      });
+    });
   }
 };
