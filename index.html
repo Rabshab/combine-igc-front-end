@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
     <title>Combine IGC</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="background">
-        <div class="content-container">
-            <nav>
-                <span class="title">
-                    <a href="#" target="_blank" rel="noopener noreferrer">Combine
-                        IGC
-                    </a>
-                </span>
-            </nav>
-            <div class="d-flex justify-content-center">
-                <div class="text-container">
-                    <img class="combine-svg-image" src="Frame.svg" alt="Image of igc files being combined">
-                    <h1>Combine your flight logs.</h1>
-                    <p>
-                        Combine IGC is the best utility for combining your broken flight logs. Simply choose
-                        the files you would like to combine and they will be stitched
-                        together, in the correct order, automatically.
-                    </p>
-                    <input type="file" accept=".igc" id="combine" multiple>
-                </div>
+      <div class="container">
+        <nav>
+          <span class="title">
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              >Combine IGC
+            </a>
+          </span>
+        </nav>
+        <div class="d-flex justify-content-center">
+          <div
+            class="content-container d-flex justify-content-center align-items-center"
+          >
+            <img
+              class="combine-svg-image"
+              src="Frame.svg"
+              alt="Image of igc files being combined"
+            />
+            <div class="text-container d-flex ">
+              <h1>Flight computer split your logs?</h1>
+              <p>
+                Choose the .IGC files you would like to combine and they will be
+                stitched together, in the correct order, automatically.
+              </p>
+              <label for="file-input">Choose Files</label>
+              <input
+                id="file-input"
+                type="file"
+                accept=".igc"
+                id="combine"
+                multiple
+              />
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
-<script src="app.js"></script>
-
+  </body>
+  <script src="app.js"></script>
 </html>
