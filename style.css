@@ -22,10 +22,20 @@
 }
 
 @media (max-width: 768px) {
-  .content-container {
+  .container {
     width: calc(100vw - 80px);
     height: calc(100vh - 80px);
     margin: 20px 20px 20px 20px;
+    padding: 1px 18px 18px 18px;
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    width: calc(100vw - 60px);
+    height: calc(100vh - 40px);
+    margin: 5px 5px 5px 5px;
+    padding: 1px 24px 24px 24px;
   }
 }
 
