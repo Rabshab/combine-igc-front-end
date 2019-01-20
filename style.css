@@ -57,6 +57,12 @@
   flex-direction: column;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
 .d-flex {
   display: flex;
 }
