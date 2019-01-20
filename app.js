@@ -1,4 +1,7 @@
 let result = [];
+const label = document.getElementById("input-label");
+const loading = document.getElementById("loading");
+const downloadLink = document.getElementById("download-link");
 
 document.getElementById("combine").onchange = e => {
   for (let i = 0; i < e.target.files.length; i++) {
@@ -20,6 +23,9 @@ const postFiles = (contents, length) => {
   result.push(contents);
 
   if (result.length === length) {
+    label.classList.add("display-none");
+    loading.classList.remove("display-none");
+
     return fetch("http://localhost:3000/combine", {
       method: "POST",
       headers: {
@@ -28,13 +34,11 @@ const postFiles = (contents, length) => {
       body: JSON.stringify(result)
     }).then(res => {
       res.blob().then(blob => {
-        var link = document.createElement("a");
-        link.href = window.URL.createObjectURL(blob);
-        link.download = "combined.igc";
+        loading.classList.add("display-none");
+        downloadLink.classList.remove("display-none");
 
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        downloadLink.href = window.URL.createObjectURL(blob);
+        downloadLink.download = "combined.igc";
       });
     });
   }

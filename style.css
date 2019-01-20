@@ -69,6 +69,10 @@
   align-items: center;
 }
 
+.display-none {
+  display: none !important;
+}
+
 .combine-svg-image {
   width: 100%;
 }
@@ -104,7 +108,27 @@ label[for="file-input"] {
   transition: 200ms ease-in;
 }
 
+#download-link {
+  width: 180px;
+  height: 60px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4511e;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+  cursor: pointer;
+  transition: 200ms ease-in;
+  font-size: 16px;
+}
+
 label[for="file-input"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+#download-link:hover {
   transform: translateY(-2px);
   box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
 }
