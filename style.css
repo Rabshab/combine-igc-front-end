@@ -39,9 +39,24 @@
   }
 }
 
+.title {
+  font-family: "Karla", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: #455a64;
+  font-size: 2rem;
+}
+
 .container nav {
   margin: 18px 50px;
   border-bottom: 5px solid #f4511e;
+}
+
+@media (max-width: 460px) {
+  nav {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .content-container {
@@ -84,10 +99,13 @@
 }
 
 h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   color: #455a64;
 }
 
 p {
+  font-family: "Montserrat", sans-serif;
   color: #455a64;
 }
 
