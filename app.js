@@ -3,7 +3,7 @@ const label = document.getElementById("input-label");
 const loading = document.getElementById("loading");
 const downloadLink = document.getElementById("download-link");
 
-document.getElementById("combine").onchange = e => {
+document.getElementById("file-input").onchange = e => {
   for (let i = 0; i < e.target.files.length; i++) {
     readFile(e.target.files[i], e.target.files.length);
   }
