@@ -26,13 +26,16 @@ const postFiles = (contents, length) => {
     label.classList.add("display-none");
     loading.classList.remove("display-none");
 
-    return fetch("http://localhost:3000/combine", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json; charset=utf-8"
-      },
-      body: JSON.stringify(result)
-    }).then(res => {
+    return fetch(
+      " https://d338x1r9t0.execute-api.eu-west-1.amazonaws.com/prod/combine",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        },
+        body: JSON.stringify(result)
+      }
+    ).then(res => {
       res.blob().then(blob => {
         loading.classList.add("display-none");
         downloadLink.classList.remove("display-none");
